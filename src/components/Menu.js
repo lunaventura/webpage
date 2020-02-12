@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
@@ -11,6 +12,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import Link from './Link';
+import LeftMenu from './LeftMenu';
+import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -27,8 +31,13 @@ const useStyles = makeStyles(theme => ({
 export default function MenuAppBar() {
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
+  const [openDrawer, setOpenDrawer] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
+  const handleDrawer = event => {
+    setOpenDrawer(event.target.currentTarget);
+  };
 
   const handleChange = event => {
     setAuth(event.target.checked);
@@ -42,16 +51,32 @@ export default function MenuAppBar() {
     setAnchorEl(null);
   };
 
+  const urls = [
+    { title:"Home", url:"/" },
+    { title:"About", url:"/about" },
+    { title:"Events", url:"/events" },
+    { title:"Contact", url:"/contact" },
+  ]
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+          <IconButton edge="start" className={classes.menuButton} onClick={handleDrawer} color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Photos
+            DiSoL
           </Typography>
+
+          <Hidden only={['xs','sm']}>
+              {urls.map((x, i) => 
+                <Button key={i} color="inherit" component={Link} naked href={x.url}>{x.title}</Button>
+              )}
+
+              <Button variant="contained">Signup</Button>
+          </Hidden>
+
           {auth && (
             <div>
               <IconButton
@@ -78,13 +103,14 @@ export default function MenuAppBar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My account</MenuItem>
               </Menu>
             </div>
           )}
         </Toolbar>
       </AppBar>
+
+      <LeftMenu open={openDrawer} />
     </div>
   );
 }
