@@ -15,6 +15,8 @@ export default function List() {
             {formatMessage("events.title")}
           </Typography>
         </Box>
+
+        <p>{process.env.SECRET}</p>
       </Container>
     </Layout>
   );
