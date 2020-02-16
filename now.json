@@ -4,5 +4,6 @@
       "SECRET": "@my-secret-key",
       "ANOTHER_SECRET": "@my-other-secret-key"
     }
-  }
+  },
+  "version": 2
 }
