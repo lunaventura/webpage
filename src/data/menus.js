@@ -1,6 +1,6 @@
 export const menus = [
-  { title:"Home", url:"/", icon:"home" },
-  { title:"About", url:"/about", icon:"info" },
-  { title:"Events", url:"/events", icon:"event" },
-  { title:"Contact", url:"/contact", icon:"contact_mail" },
+  { name:"home", url:"/", icon:"home" },
+  { name:"about", url:"/about", icon:"info" },
+  { name:"events", url:"/events", icon:"event" },
+  { name:"contact", url:"/contact", icon:"contact_mail" },
 ]

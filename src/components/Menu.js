@@ -13,6 +13,7 @@ import Link from './Link';
 import LeftMenu from './LeftMenu';
 import Hidden from '@material-ui/core/Hidden';
 
+import { formatMessage } from '../utils'
 import { menus } from '../data'
 
 const useStyles = makeStyles(theme => ({
@@ -70,7 +71,15 @@ export default function MenuAppBar() {
 
           <Hidden only={['xs','sm']}>
               {menus.map((x, i) => 
-                <Button key={i} color="inherit" component={Link} naked href={x.url}>{x.title}</Button>
+                <Button 
+                  key={i} 
+                  color="inherit" 
+                  component={Link} 
+                  naked 
+                  href={x.url}
+                >
+                  {formatMessage(`menu.${x.name}`)}
+                </Button>
               )}
 
               <Button variant="contained">Signup</Button>

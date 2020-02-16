@@ -1,5 +1,7 @@
 import { menus } from './menus'
+import { labels } from './labels'
 
 export {
-    menus
+    labels,
+    menus,
 }

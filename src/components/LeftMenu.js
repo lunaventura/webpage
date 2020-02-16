@@ -14,6 +14,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Icon from '@material-ui/core/Icon';
 
 import { menus } from '../data'
+import { formatMessage } from '../utils'
 
 const useStyles = makeStyles({
   list: {
@@ -44,7 +45,7 @@ function LeftMenu(props) {
         {menus.map((x, index) => (
           <ListItem button key={index} component={Link} naked href={x.url} onClick={props.onClose}>
             <ListItemIcon>{<Icon>{x.icon}</Icon>}</ListItemIcon>
-            <ListItemText primary={x.title} />
+            <ListItemText primary={formatMessage(`menu.${x.name}`)} />
           </ListItem>
         ))}
       </List>
@@ -56,6 +57,7 @@ function LeftMenu(props) {
     <div>
       <SwipeableDrawer
         onClose={props.onClose}
+        onOpen={() => {}}
         open={props.open}
       >
         {sideList()}
