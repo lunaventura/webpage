@@ -1,6 +1,6 @@
 {
-  "name": "nextjs",
-  "version": "4.0.0",
+  "name": "disol-web",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@formatjs/cli": "^1.1.20",
@@ -14,6 +14,7 @@
     "glob": "^7.1.6",
     "intl": "^1.2.5",
     "next": "latest",
+    "next-offline": "^5.0.0",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
