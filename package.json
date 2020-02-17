@@ -1,6 +1,6 @@
 {
-  "name": "nextjs",
-  "version": "4.0.0",
+  "name": "disol-web",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@formatjs/cli": "^1.1.20",
