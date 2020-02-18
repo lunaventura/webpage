@@ -15,8 +15,6 @@ export default function Index() {
             {formatMessage("menu.home")}
           </Typography>
         </Box>
-
-         <p>{process.env.SECRET}</p>
       </Container>
     </Layout>
   );
