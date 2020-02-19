@@ -20,6 +20,7 @@ export default class MyDocument extends Document {
             rel="stylesheet" 
             href="https://fonts.googleapis.com/icon?family=Material+Icons" 
           />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
           <Main />
