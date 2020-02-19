@@ -1,3 +1,10 @@
 {
-  "title": "Página oficial del Día del Software Libre (DiSoL)"
+  "home.title": "Página oficial del Día del Software Libre (DiSoL)",
+  "contact.title": "Contacto",
+  "about.title": "Acerca de",
+  "events.title": "Eventos",
+  "menu.home": "Inicio",
+  "menu.contact": "Contacto",
+  "menu.about": "Acerca de",
+  "menu.events": "Eventos"
 }
