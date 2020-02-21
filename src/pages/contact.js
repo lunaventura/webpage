@@ -1,42 +1,19 @@
 import React, { useState } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import Container from '@material-ui/core/Container';
 
-
 import { Input } from '../components'
-import { makeStyles } from '@material-ui/core/styles';
-
-import { formatMessage } from '../utils'
+import { contactItems } from '../data';
+import { contactStyles } from '../styles';
+import { convertArrToObj, formatMessage } from '../utils'
 import { Layout } from '../components'
-const items = [ 
-  { title: "name", required: true, multiline:false, },
-  { title: "email", required: true, multiline: false,  },
-  { title: "message", required: true, multiline: true }
-]
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    paddingTop: '2rem',
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-}));
 
 export default function Contact() {
-  const classes = useStyles()
-  const [contact, setContact] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
+  const classes = contactStyles()
+  const [contact, setContact] = useState(convertArrToObj(contactItems,"title","defaultValue"))
 
   const handleChange = (e) => {
     setContact({
@@ -60,7 +37,7 @@ export default function Contact() {
               </Container>        
             </Grid>        
 
-            {items.map((x, i) => 
+            {contactItems.map((x, i) => 
               <Grid key={i} item xs={12}>
                 <Container maxWidth="sm">
                   <Input 
