@@ -5,9 +5,8 @@ export const contactStyles = makeStyles(theme => ({
     paddingTop: '2rem',
     flexGrow: 1,
   },
-  paper: {
-    padding: theme.spacing(2),
+  inputSpacing: {
+    padding: theme.spacing(1),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
   },
 }));

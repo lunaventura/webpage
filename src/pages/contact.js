@@ -27,9 +27,8 @@ export default function Contact() {
       <div className={classes.root}>
           <Grid 
             container
-            spacing={3}
             >
-            <Grid item xs={12}>
+            <Grid item xs={12} className={classes.inputSpacing}>
               <Container maxWidth="sm">
                 <Typography align="center" variant="h4" component="h1" gutterBottom>
                   {formatMessage("contact.title")}
@@ -38,7 +37,7 @@ export default function Contact() {
             </Grid>        
 
             {contactItems.map((x, i) => 
-              <Grid key={i} item xs={12}>
+              <Grid key={i} item xs={12} className={classes.inputSpacing}>
                 <Container maxWidth="sm">
                   <Input 
                     onChange={handleChange} 
@@ -51,7 +50,7 @@ export default function Contact() {
               </Grid>
             )}
 
-            <Grid item xs={12}>
+            <Grid item xs={12} className={classes.inputSpacing}>
               <Container maxWidth="xs">
                 <Button
                   variant="contained"
