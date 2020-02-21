@@ -33,4 +33,8 @@ export const labels = defineMessages({
         id: 'menu.events',
         defaultMessage: 'Eventos',
     },
+    "general.send": {
+        id: 'general.send',
+        defaultMessage: 'Enviar',
+    },
 })

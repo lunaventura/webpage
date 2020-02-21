@@ -6,5 +6,7 @@
   "menu.home": "Home",
   "menu.contact": "Contact",
   "menu.about": "About",
-  "menu.events": "Events"
+  "menu.events": "Events",
+
+  "general.send": "Send",
 }
