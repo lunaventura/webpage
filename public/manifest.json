@@ -1,6 +1,6 @@
 {
-  "name": "Disol Offline",
-  "short_name": "Disol Offline",
+  "name": "Disol",
+  "short_name": "Disol - Día del Software Libre",
   "icons": [
     {
       "src": "/icon-192.png",
@@ -14,7 +14,7 @@
     }
   ],
   "background_color": "#FFFFFF",
-  "description": "Official application of Disol with the possibility of working offline",
+  "description": "Official application of Disol - México",
   "display": "fullscreen",
   "start_url": "/",
   "theme_color": "#000"
