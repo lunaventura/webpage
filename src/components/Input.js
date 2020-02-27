@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import TextField from '@material-ui/core/TextField'
 
 function Input({ 
-    required, 
-    label, 
     error, 
     onChange, 
     value, 

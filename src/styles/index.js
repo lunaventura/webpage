@@ -1,5 +1,7 @@
 import { contactStyles } from './contact'
+import { aboutStyles } from './about'
 
 export {
-    contactStyles
+    aboutStyles,
+    contactStyles,
 }

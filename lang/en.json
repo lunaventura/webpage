@@ -1,12 +1,19 @@
 {
   "home.title": "Official page of Free Software Day",
   "contact.title": "Contact",
-  "about.title": "About",
+  "about.title": "About us",
+  "the_event.title": "The Event",
   "events.title": "Events",
   "menu.home": "Home",
   "menu.contact": "Contact",
   "menu.about": "About",
+  "menu.the_event": "The Event",
   "menu.events": "Events",
 
   "general.send": "Send",
+
+  "about.description.1": "We are the Free Software community of Cd. Serdán, Puebla, México. We have been promoting and disseminating free software, open source, free hardware and related topics for more than a decade.",
+  "about.description.2": "During the last 10 years we have organized the DiSoL 'Free Software Day' based on the Higher Technological Institute of Cd. Serdán, making known to the student community and any enthusiast interested in learning the technologies currently working in the industry through conferences and workshops cycles.",
+
+  "about.team.title": "Team"
 }

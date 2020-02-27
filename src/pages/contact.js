@@ -25,9 +25,7 @@ export default function Contact() {
   return (
     <Layout title={formatMessage("contact.title")}>
       <div className={classes.root}>
-          <Grid 
-            container
-            >
+          <Grid container>
             <Grid item xs={12} className={classes.inputSpacing}>
               <Container maxWidth="sm">
                 <Typography align="center" variant="h4" component="h1" gutterBottom>

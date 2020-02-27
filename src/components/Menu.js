@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function MenuAppBar() {
+export default () => {
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
   const [openDrawer, setOpenDrawer] = React.useState(false);
@@ -71,15 +71,19 @@ export default function MenuAppBar() {
 
           <Hidden only={['xs','sm']}>
               {menus.map((x, i) => 
-                <Button 
-                  key={i} 
-                  color="inherit" 
-                  component={Link} 
-                  naked 
-                  href={x.url}
-                >
-                  {formatMessage(`menu.${x.name}`)}
-                </Button>
+                <>
+                  {x.enable ? 
+                    <Button 
+                      key={i} 
+                      color="inherit" 
+                      component={Link} 
+                      naked 
+                      href={x.url}
+                    >
+                      {formatMessage(`menu.${x.name}`)}
+                    </Button>
+                  :null}
+                </>
               )}
 
               <Button variant="contained">Signup</Button>

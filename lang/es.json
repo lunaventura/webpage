@@ -1,12 +1,19 @@
 {
   "home.title": "Página oficial del Día del Software Libre (DiSoL)",
   "contact.title": "Contacto",
-  "about.title": "Acerca de",
+  "about.title": "Quienes somos",
+  "the_event.title": "El Evento",
   "events.title": "Eventos",
   "menu.home": "Inicio",
   "menu.contact": "Contacto",
   "menu.about": "Acerca de",
+  "menu.the_event": "El Evento",
   "menu.events": "Eventos",
 
   "general.send": "Enviar",
+
+  "about.description.1": "Somos la comunidad de Software Libre de Cd. Serdán, Puebla, México. Desde hace más de una década promovemos y difundimos el software libre, código abierto, hardware libre y temas relacionados.",
+  "about.description.2": "Durante los últimos 10 años hemos organizado el DiSoL 'Día del Software libre' teniendo como sede el Instituto Tecnológico Superior de Cd. Serdán, dando a conocer a la comunidad estudiantil y a cualquier entusiasta interesado en aprender las tecnologías que actualmente se trabajan en la industria mediante ciclos de conferencias y talleres.",
+
+  "about.team.title": "Team"
 }
