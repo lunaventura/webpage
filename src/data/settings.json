@@ -29,6 +29,11 @@
     "location_url": "https://g.page/TecSerdan?share"
   },
   "social": [
-    { "name": "facebook", "url": "https://facebook.com", "enable": true, "img_url": "/social/facebook.png" }
+    { 
+      "name": "facebook", 
+      "url": "https://www.facebook.com/Comunidad-de-Software-Libre-de-Cd-Serd%C3%A1n-308385709194950/", 
+      "enable": true, 
+      "img_url": "/social/facebook.svg" 
+    }
   ]
 }

@@ -1,21 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
+import MuiLink from '@material-ui/core/Link';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 
 import { the_event, social } from '../data/settings.json'
-
-function Copyright() {
-  return (
-    <>
-       <p>{the_event.full_name}{" "}{new Date().getFullYear()}</p>
-       <p>{the_event.org}</p>
-    </>
-  );
-}
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,7 +14,7 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(8),
+    marginBottom: theme.spacing(4),
     display: 'flex',
   },
   iconsWrapper: {
@@ -31,6 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
   icons: {
     display: 'flex',
+    margin: 'auto',
   },
   icon: {
     width: 48,
@@ -43,6 +35,12 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: theme.palette.warning.dark,
     },
   },
+  copyright: {
+    paddingTop: theme.spacing(2),
+  },
+  subcontainer: {
+    borderTop: '1px solid lightgrey'
+  },
 }));
 
 export default function AppFooter() {
@@ -51,35 +49,31 @@ export default function AppFooter() {
   return (
     <Typography component="footer" className={classes.root}>
       <Container className={classes.container}>
-        <Grid container>
-          <Grid item xs={6} sm={4} md={3}>
+        <Grid container className={classes.subcontainer}>
+          <Grid item xs={12}>
             <Grid
               container
               direction="column"
-              justify="flex-end"
+              justify="center"
               className={classes.iconsWrapper}
               spacing={2}
             >
               <Grid item className={classes.icons}>
                 {social.map((x,i) => 
                   x.enable ?
-                    <Link
-                      href={x.url}
-                      title={x.name}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <a key={i} href={x.url} className={classes.icon}>
-                        <img src={x.img_url} alt={x.name} />
-                      </a>
-                    </Link>
+                    <MuiLink key={i} color="inherit" href={x.url} target="_blank" rel="noopener noreferref">
+                      <img src={x.img_url} alt={x.name} width="30" />
+                    </MuiLink>
                   :null
                 )}
               </Grid>
-              <Grid item>
-                <Copyright />
-              </Grid>
             </Grid>
+          </Grid>
+          <Grid item xs={12} sm={6} className={classes.copyright}>
+              {the_event.full_name}{" "}{new Date().getFullYear()}
+          </Grid>
+          <Grid item xs={12} sm={6} className={classes.copyright}>
+            {the_event.org}
           </Grid>
         </Grid>
       </Container>
