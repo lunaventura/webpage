@@ -13,9 +13,9 @@ export const labels = defineMessages({
         id: 'contact.title',
         defaultMessage: 'Contacto',
     },
-    "the_event.title": {
-        id: 'the_event.title',
-        defaultMessage: 'El Evento',
+    "schedule.title": {
+        id: 'schedule.title',
+        defaultMessage: 'Programa',
     },
     "events.title": {
         id: 'events.title',
@@ -33,9 +33,9 @@ export const labels = defineMessages({
         id: 'menu.about',
         defaultMessage: 'Acerca de',
     },
-    "menu.the_event": {
-        id: 'menu.the_event',
-        defaultMessage: 'El Evento',
+    "menu.schedule": {
+        id: 'menu.schedule',
+        defaultMessage: 'Programa',
     },
     "menu.events": {
         id: 'menu.events',

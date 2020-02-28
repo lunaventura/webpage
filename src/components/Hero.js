@@ -17,6 +17,7 @@ const styles = theme => ({
   },
   button: {
     minWidth: 200,
+    color: '#ffffff',
   },
   h5: {
     color: theme.palette.common.black,
@@ -50,9 +51,9 @@ function Hero(props) {
         size="large"
         className={classes.button}
         component={Link}
-        href="/the-event"
+        href="/schedule"
       >
-        {formatMessage("the_event.title")}
+        {formatMessage("schedule.title")}
       </Button>
     </HeroLayout>
   );
