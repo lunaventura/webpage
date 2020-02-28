@@ -11,14 +11,20 @@ import { the_event, social } from '../data/settings.json'
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+
+    position: 'fixed',
+    left: 0,
+    bottom: 0,
+    width: '100%',    
   },
   container: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(4),
     marginBottom: theme.spacing(4),
     display: 'flex',
   },
   iconsWrapper: {
-    height: 120,
+    paddingTop: theme.spacing(3),
+    height: 75,
   },
   icons: {
     display: 'flex',
@@ -40,6 +46,18 @@ const useStyles = makeStyles(theme => ({
   },
   subcontainer: {
     borderTop: '1px solid lightgrey'
+  },
+  copyright_right: {
+    textAlign: 'center', 
+    [theme.breakpoints.up('md')]: {
+      textAlign: 'right', 
+    },
+  },
+  copyright_left: {
+    textAlign: 'center', 
+    [theme.breakpoints.up('md')]: {
+      textAlign: 'left', 
+    },
   },
 }));
 
@@ -69,11 +87,15 @@ export default function AppFooter() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} sm={6} className={classes.copyright}>
-              {the_event.full_name}{" "}{new Date().getFullYear()}
-          </Grid>
-          <Grid item xs={12} sm={6} className={classes.copyright}>
-            {the_event.org}
+          <Grid item xs={12} className={classes.copyright}>
+            <Grid container>
+              <Grid item xs={12} md={6} className={classes.copyright_left}>
+                  {the_event.full_name}{" "}{new Date().getFullYear()}
+              </Grid>
+              <Grid item xs={12} md={6} className={classes.copyright_right}>
+                {the_event.org}
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Container>
