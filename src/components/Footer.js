@@ -11,11 +11,6 @@ import { the_event, social } from '../data/settings.json'
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
-
-    position: 'fixed',
-    left: 0,
-    bottom: 0,
-    width: '100%',    
   },
   container: {
     marginTop: theme.spacing(4),
