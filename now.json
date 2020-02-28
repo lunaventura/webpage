@@ -12,7 +12,7 @@
   ],
   "build": {
     "env": {
-      "SECRET": "@secret_key"
+      "MAPS_KEY": "@maps_key"
     }
   },
   "builds": [

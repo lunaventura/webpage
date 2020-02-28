@@ -43,14 +43,12 @@ function LeftMenu(props) {
 
       <List>
         {menus.map((x, index) => (
-          <>
-            {x.enable ?
-              <ListItem button key={index} component={Link} naked href={x.url} onClick={props.onClose}>
-                <ListItemIcon>{<Icon>{x.icon}</Icon>}</ListItemIcon>
-                <ListItemText primary={formatMessage(`menu.${x.name}`)} />
-              </ListItem>
-            :null}
-          </>
+          x.enable ?
+            <ListItem button key={index} component={Link} naked href={x.url} onClick={props.onClose}>
+              <ListItemIcon>{<Icon>{x.icon}</Icon>}</ListItemIcon>
+              <ListItemText primary={formatMessage(`menu.${x.name}`)} />
+            </ListItem>
+          :null
         ))}
       </List>
       <Divider />

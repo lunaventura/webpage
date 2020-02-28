@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import MuiLink from '@material-ui/core/Link';
 
-import team from '../data/team.json'
+import { team } from '../data/settings.json'
 
 const useStyles = makeStyles(theme => ({
   root: {

@@ -2,20 +2,27 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Hidden  from '@material-ui/core/Hidden'
 
 import { formatMessage } from '../utils'
-import { Layout } from '../components'
+import { 
+  Hero, 
+  Layout,
+  VenueLocation, 
+  CardOfVenue 
+} from '../components'
 
 export default function Index() {
   return (
     <Layout title={formatMessage("home.title")}>
-      <Container maxWidth="sm">
-        <Box my={4}>
-          <Typography variant="h4" component="h1" gutterBottom>
-            {formatMessage("menu.home")}
-          </Typography>
-        </Box>
-      </Container>
+      <Hero />
+
+      <Hidden only="xs">
+        <VenueLocation />
+      </Hidden>
+      <Hidden smUp>
+        <CardOfVenue />
+      </Hidden>
     </Layout>
   );
 }

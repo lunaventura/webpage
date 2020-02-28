@@ -21,6 +21,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/icon?family=Material+Icons" 
           />
           <link rel="manifest" href="/manifest.json" />
+          <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
         </Head>
         <body>
           <Main />

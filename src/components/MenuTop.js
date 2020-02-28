@@ -12,8 +12,10 @@ import Menu from '@material-ui/core/Menu';
 import Link from './Link';
 import LeftMenu from './LeftMenu';
 import Hidden from '@material-ui/core/Hidden';
+import { withRouter } from 'next/router'
 
 import { formatMessage } from '../utils'
+import { the_event } from '../data/settings.json'
 import { menus } from '../data'
 
 const useStyles = makeStyles(theme => ({
@@ -28,8 +30,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default () => {
+function MenuTop ({ router }) {
   const classes = useStyles();
+
   const [auth, setAuth] = React.useState(true);
   const [openDrawer, setOpenDrawer] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -48,48 +51,49 @@ export default () => {
   };
 
   const handleClose = () => {
-    setAnchorEl(null);
+ 
+   setAnchorEl(null);
   };
-
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
-          <IconButton 
-            edge="start" 
-            className={classes.menuButton} 
-            onClick={handleDrawer} 
-            color="inherit" 
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
+          <Hidden mdUp>
+            <IconButton 
+              edge="start" 
+              className={classes.menuButton} 
+              onClick={handleDrawer} 
+              color="inherit" 
+              aria-label="menu"
+            >
+              <MenuIcon />
+            </IconButton>
+          </Hidden>
+
           <Typography variant="h6" className={classes.title}>
-            DiSoL
+            {router.pathname !== '/' ? the_event.short_name : " "}
           </Typography>
 
           <Hidden only={['xs','sm']}>
-              {menus.map((x, i) => 
-                <>
-                  {x.enable ? 
-                    <Button 
-                      key={i} 
-                      color="inherit" 
-                      component={Link} 
-                      naked 
-                      href={x.url}
-                    >
-                      {formatMessage(`menu.${x.name}`)}
-                    </Button>
-                  :null}
-                </>
-              )}
+            {menus.map((x, i) => 
+              x.enable ? 
+                <Button 
+                  key={i} 
+                  color="inherit" 
+                  component={Link} 
+                  naked 
+                  href={x.url}
+                >
+                  {formatMessage(`menu.${x.name}`)}
+                </Button>
+              :null
+            )}
 
-              <Button variant="contained">Signup</Button>
+            {/**<Button variant="contained">Signup</Button>**/}
           </Hidden>
 
-          {auth && (
+          {/**auth && (
             <div>
               <IconButton
                 aria-label="account of current user"
@@ -118,7 +122,7 @@ export default () => {
                 <MenuItem onClick={handleClose}>My account</MenuItem>
               </Menu>
             </div>
-          )}
+          )**/}
         </Toolbar>
       </AppBar>
 
@@ -126,3 +130,5 @@ export default () => {
     </div>
   );
 }
+
+export default withRouter(MenuTop)

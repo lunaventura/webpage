@@ -57,4 +57,20 @@ export const labels = defineMessages({
         id: 'about.team.title',
         defaultMessage: 'Team',
     },
+    "home.event_city": {
+        id: 'home.event_city',
+        defaultMessage: 'Cd. Serdán, Puebla, México. 2 de Marzo del 2020',
+    },
+    "home.event_name": {
+        id: 'home.event_name',
+        defaultMessage: 'Día del Software Libre',
+    },
+    "general.place_title": {
+        id: 'general.place_title',
+        defaultMessage: 'Sede',
+    },
+    "home.map.event_description": {
+        id: 'home.map.event_description',
+        defaultMessage: 'El disol se realizara en las instalaciones del Instituto Tecnológico Superior de Cd. Serdán, Puebla. Se tendrá un ciclo de conferencias y talleres para los asistentes.',
+    },
 })

@@ -2,7 +2,7 @@ const withOffline = require('next-offline');
 
 const nextConfig = {
   env: {
-    SECRET: process.env.SECRET,
+    MAPS_KEY: process.env.MAPS_KEY,
   },
   target: 'serverless',
   transformManifest: manifest => ['/'].concat(manifest), // add the homepage to the cache

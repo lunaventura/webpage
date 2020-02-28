@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import Menu from './Menu'
+import MenuTop from './MenuTop'
+import Footer from './Footer'
 import { formatMessage } from '../utils'
 
 export default ({ title, children }) => {
@@ -11,10 +12,12 @@ export default ({ title, children }) => {
       </Head>
 
       <header>
-        <Menu />
+        <MenuTop />
       </header>
 
       {children}
+
+      <Footer />
     </div>
   )
 }

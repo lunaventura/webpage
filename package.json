@@ -18,7 +18,8 @@
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-intl": "^3.12.0"
+    "react-intl": "^3.12.0",
+    "react-map-gl": "^5.2.3"
   },
   "scripts": {
     "dev": "node --icu-data-dir=node_modules/full-icu server.js",
