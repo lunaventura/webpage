@@ -4,8 +4,8 @@ export const scheduleStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     paddingTop: theme.spacing(12),
-    paddingLeft: theme.spacing(3),
-    paddingRight: theme.spacing(3),
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
     paddingBottom: theme.spacing(3),
   },
   typography: {

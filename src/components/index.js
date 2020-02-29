@@ -5,6 +5,7 @@ import TeamAvatar from './TeamAvatar'
 import Hero from './Hero'
 import VenueLocation from './VenueLocation'
 import CardOfVenue from './CardOfVenue'
+import Schedule from './Schedule'
 
 export {
     CardOfVenue,
@@ -12,6 +13,7 @@ export {
     Input,
     Layout,
     Link,
+    Schedule,
     TeamAvatar,
     VenueLocation,
 }

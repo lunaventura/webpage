@@ -19,5 +19,7 @@
   "home.event_city:": "Cd. Serdán, Puebla, México. 2 de Marzo del 2020",
   "home.event_name": "Día del Software Libre",
   "general.place_title": "Sede",
-  "home.map.event_description": "El disol se realizara en las instalaciones del Instituto Tecnológico Superior de Cd. Serdán, Puebla. Se tendrá un ciclo de conferencias y talleres para los asistentes."
+  "home.map.event_description": "El disol se realizara en las instalaciones del Instituto Tecnológico Superior de Cd. Serdán, Puebla. Se tendrá un ciclo de conferencias y talleres para los asistentes.",
+  "general.conference": "Conferencia",
+  "general.workshop": "Taller"
 }
