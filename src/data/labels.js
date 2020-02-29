@@ -73,4 +73,12 @@ export const labels = defineMessages({
         id: 'home.map.event_description',
         defaultMessage: 'El disol se realizara en las instalaciones del Instituto Tecnológico Superior de Cd. Serdán, Puebla. Se tendrá un ciclo de conferencias y talleres para los asistentes.',
     },
+    "general.conference": {
+        id: 'general.conference',
+        defaultMessage: 'Conferencia',
+    },
+    "general.workshop": {
+        id: 'general.workshop',
+        defaultMessage: 'Taller',
+    },
 })

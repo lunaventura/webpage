@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import { formatMessage } from '../utils'
-import { Layout } from '../components'
+import { Layout, Schedule as ScheduleForm  } from '../components'
 import { scheduleStyles } from '../styles'
 
 export default function Schedule() {
@@ -28,6 +28,9 @@ export default function Schedule() {
             <Typography className={classes.typography} variant="h4" component="h1" gutterBottom align="center">
               {formatMessage("schedule.title")}
             </Typography>
+          </G>
+          <G>
+            <ScheduleForm />
           </G>
         </Grid>
       </div>
