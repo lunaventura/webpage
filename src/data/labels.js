@@ -15,7 +15,7 @@ export const labels = defineMessages({
     },
     "schedule.title": {
         id: 'schedule.title',
-        defaultMessage: 'Programa',
+        defaultMessage: 'hola',
     },
     "events.title": {
         id: 'events.title',
