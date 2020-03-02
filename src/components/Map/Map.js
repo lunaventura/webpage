@@ -3,6 +3,7 @@ import ReactMapGL, { Marker, NavigationControl } from 'react-map-gl';
 import { venue } from '../../data/settings.json'
 import LocationIcon from '@material-ui/icons/LocationOn';
 import useWindowWidth from '../../utils/useWindowWidth'
+import { CardOfVenue } from '../'
 
 const styles= {
   navigationControl: {
@@ -43,6 +44,8 @@ function Map(){
         <div style={styles.navigationControl}>
           <NavigationControl />
         </div>
+
+        <CardOfVenue />
       </ReactMapGL>
   )
 }
