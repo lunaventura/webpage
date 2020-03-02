@@ -15,6 +15,9 @@ const useStyles = makeStyles(theme => ({
       margin: theme.spacing(1),
     },
   },
+  generalContainer: {
+    justifyContent: 'center',
+  },
   avatar: {
     width: theme.spacing(15),
     height: theme.spacing(15),
@@ -47,7 +50,7 @@ export default () => {
 
   return(
     <>
-      <Grid container>
+      <Grid container className={classes.generalContainer}>
         {team && team.map((x, i) =>
           <Grid key={i} item xs={12} sm={3} className={classes.container}>
             <Grid container>
